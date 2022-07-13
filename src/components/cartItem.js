@@ -1,7 +1,8 @@
 import React from 'react'
 import {useState,useReducer} from 'react'
-
+import {useCart} from '../context.js/cart'
 function CartItem({cartItem}) {
+    const {dispatchCart}=useCart()
 
     const setCounterCb=(counter,action)=>{ 
         console.log(action.type)       
@@ -11,7 +12,6 @@ function CartItem({cartItem}) {
         }else{
             return counter=counter-1
         }
-        // return result
     }
 
     const [counter,setCounter]=useReducer(setCounterCb,1)
@@ -28,7 +28,12 @@ function CartItem({cartItem}) {
                 -
             </button>
             </div>
+            <button onClick={()=>dispatchCart({type:"remove",payload:cartItem.id})}>Remove</button>
+            <button onClick={()=>dispatchCart({type:"save",payload:cartItem})}>Save For Later</button>
 
+            {
+
+            }
         </div>
   )
 }
