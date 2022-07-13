@@ -23,13 +23,13 @@ function Cart() {
     const [discount,setDiscount]=useState(initialDiscount)
   return (
    <div className='cart-section'> <div>
-        Cart
+        <h1>cart ({cart.length})</h1>
         {cart.length !==0 ? cart.map((cartItem)=>{
             return <CartItem cartItem={cartItem} key={cartItem.id} setSum={setSum} setDiscount={setDiscount}/>
-        }) :<div><h1>Cart is empty</h1></div>}
+        }) :<div><h2>Cart is empty</h2></div>}
         <div>
             <hr/>
-        <h1>saved items</h1>
+        <h2>saved items</h2>
         {saved.length!==0 ?
         saved.map((savedItem)=><SavedItem savedItem={savedItem} key={savedItem.id} setSum={setSum} setDiscount={setDiscount}/>):"empty"
     }

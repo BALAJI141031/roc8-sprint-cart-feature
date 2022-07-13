@@ -3,7 +3,7 @@ import {useCart} from '../context.js/cart'
 function SavedItem({savedItem,setSum}) {
     const {dispatchCart}=useCart()
   return (
-    <div>
+    <div className='cart-item'>
         <img src={savedItem.imageUrl}/>
         <p>{savedItem.brand}</p>
         <button onClick={()=>{

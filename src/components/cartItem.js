@@ -19,7 +19,7 @@ function CartItem({cartItem,setSum,setDiscount}) {
 
     const [counter,setCounter]=useReducer(setCounterCb,1)
   return (
-   <div>
+   <div className='cart-item'>
             <img src={cartItem.imageUrl}/>
             <p>{cartItem.brand}</p>
             <div className='quantity-section'>

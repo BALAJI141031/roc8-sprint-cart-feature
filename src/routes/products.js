@@ -5,11 +5,10 @@ import {useNavigate} from 'react-router-dom'
 function Products() {
     const {dispatchCart,cart}=useCart()
     const navigate=useNavigate()
-  console.log(cart,"coming from products")
   const cartIds=cart.map((cartItem)=>cartItem.id)
 
     const renderedProducts=dbProducts.products.map((product)=>{
-        return <div key={product.id} className="product-div">
+        return <div key={product.id} className="ver-card ">
             <img src={product.imageUrl}/>
             <p>{product.brand}</p>
             <button onClick={()=>{
@@ -23,8 +22,12 @@ function Products() {
             </div>
     })
   return (
-    <div>Products
+    <div>
+      <h1>Products</h1>
+      <h2>Cart count:{cart.length}</h2>
+      <div className='flex-wrap-div'>
     {renderedProducts}
+    </div>
     </div>
   )
 }
