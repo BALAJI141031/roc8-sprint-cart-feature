@@ -75,3 +75,17 @@ img{
 .cart-item{
   margin:30px
 }
+
+button{
+  background-color:black;
+  color: aliceblue;
+  padding: 5px;
+  font-size: larger;
+  font-weight:bolder;
+  margin: 5px;
+
+}
+
+button:hover{
+  cursor: pointer;
+}

@@ -22,6 +22,8 @@ function CartItem({cartItem,setSum,setDiscount}) {
    <div className='cart-item'>
             <img src={cartItem.imageUrl}/>
             <p>{cartItem.brand}</p>
+            <p>original price{cartItem.price}</p>
+            <p>Discount:{cartItem.discount}</p>
             <div className='quantity-section'>
                 <button onClick={()=>setCounter({type:"increase"})}>
                 +
@@ -33,13 +35,13 @@ function CartItem({cartItem,setSum,setDiscount}) {
             </div>
             <button onClick={()=>{
                 setSum((prevSum)=>prevSum -counter*cartItem.price)
-                setDiscount((prevDiscount)=>prevDiscount-counter*cartItem.discount)
+                setDiscount((prevDiscount)=>prevDiscount -counter*cartItem.discount)
                 dispatchCart({type:"remove",payload:cartItem.id})}
                 }>Remove</button>
             <button onClick={()=>{
                 dispatchCart({type:"save",payload:cartItem})
-                setDiscount((prevDiscount)=>prevDiscount-cartItem.discount)
-                setSum((prevSum)=>prevSum -cartItem.price)
+                setDiscount((prevDiscount)=>prevDiscount-counter*cartItem.discount)
+                setSum((prevSum)=>prevSum -counter*cartItem.price)
                 }}>Save For Later</button>
         </div>
   )

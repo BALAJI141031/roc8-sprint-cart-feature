@@ -1,6 +1,6 @@
 import React from 'react'
 import {useCart} from '../context.js/cart'
-function SavedItem({savedItem,setSum}) {
+function SavedItem({savedItem,setSum,setDiscount}) {
     const {dispatchCart}=useCart()
   return (
     <div className='cart-item'>
@@ -9,6 +9,8 @@ function SavedItem({savedItem,setSum}) {
         <button onClick={()=>{
             dispatchCart({type:"cart",payload:savedItem,falg:true})
             setSum((prevSum)=>prevSum +savedItem.price)
+            setDiscount((prevDiscount)=>prevDiscount +savedItem.discount)
+
         }
             }>Move TO cart</button>
     </div>
