@@ -15,7 +15,6 @@ const CartProvider = ({ children }) => {
           ...cartState,
           cart: [...cartState.cart,action.payload],
           saved:savedItemsFromCart
-        //   cartCount: action.payload.cartCount,
         };
       case "remove":
         const filteredItems=cartState.cart.filter((product)=>product.id!==action.payload)

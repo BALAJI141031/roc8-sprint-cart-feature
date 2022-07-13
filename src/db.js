@@ -8,6 +8,7 @@ export let dbProducts= {
         idealFor:"men",
         brand:"roadster",
         price:500,
+        discount:100,
         },
          {
         id:uuid(),
@@ -15,7 +16,8 @@ export let dbProducts= {
         sizes:"XL",
         idealFor:"men",
         brand:"roadster",
-        price:800
+        price:800,
+        discount:200,
         },
         ,
          {
@@ -24,7 +26,8 @@ export let dbProducts= {
         sizes:"M",
         idealFor:"men",
         brand:"roadster",
-        price:600
+        price:600,
+        discount:300,
         },
         ,
          {
@@ -33,7 +36,8 @@ export let dbProducts= {
         sizes:"M",
         idealFor:"men",
         brand:"wrogn",
-        price:700
+        price:700,
+        discount:200,
         },
         ,
          {
@@ -42,7 +46,8 @@ export let dbProducts= {
         sizes:"L",
         idealFor:"children",
         brand:"wrogn",
-        price:1500
+        price:1500,
+        discount:400,
         },
         ,
          {
@@ -51,7 +56,8 @@ export let dbProducts= {
         sizes:"L",
         idealFor:"women",
         brand:"allensolly",
-        price:2500
+        price:2500,
+        discount:400,
         },
         ,
          {
@@ -60,7 +66,8 @@ export let dbProducts= {
         sizes:"S",
         idealFor:"women",
         brand:"allensolly",
-        price:3500
+        price:3500,
+        discount:500,
         },
     ]
 }

@@ -30,3 +30,18 @@ img{
 .quantity-section > button{
   margin: 10px;
 }
+
+.cart-section{
+  display: flex;
+  justify-content: center;
+}
+
+.cart-section > div:nth-child(2){
+  margin:5rem
+} 
+
+.flex-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
