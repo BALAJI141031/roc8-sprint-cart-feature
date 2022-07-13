@@ -4,8 +4,9 @@ import Products from './products'
 import CartItem from '../components/cartItem'
 import SavedItem from '../components/savedItem'
 import {useState} from 'react'
+import {useNavigate} from "react-router-dom"
 function Cart() {
-
+    const navigate=useNavigate()
     const {cart,saved}=useCart()
     let cartInitialPrice
     let initialDiscount
@@ -24,6 +25,7 @@ function Cart() {
   return (
    <div className='cart-section'> <div>
         <h1>cart ({cart.length})</h1>
+        <button onClick={()=>navigate("/")}>Back</button>
         {cart.length !==0 ? cart.map((cartItem)=>{
             return <CartItem cartItem={cartItem} key={cartItem.id} setSum={setSum} setDiscount={setDiscount}/>
         }) :<div><h2>Cart is empty</h2></div>}
