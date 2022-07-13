@@ -20,3 +20,13 @@ img{
 .product-div{
   margin:2rem
 }
+
+.quantity-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-section > button{
+  margin: 10px;
+}

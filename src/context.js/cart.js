@@ -9,8 +9,8 @@ const CartProvider = ({ children }) => {
       case "cart":
         return {
           ...cartState,
-          cart: [...action.payload.cart],
-          cartCount: action.payload.cartCount,
+          cart: [...cartState.cart,action.payload],
+        //   cartCount: action.payload.cartCount,
         };
       case "cartTotalAmount":
         return { ...cartState, cartTotal: action.payload };
