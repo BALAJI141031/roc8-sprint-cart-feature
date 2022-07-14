@@ -25,12 +25,13 @@ function CartItem({cartItem,setSum,setDiscount}) {
             <p>original price{cartItem.price}</p>
             <p>Discount:{cartItem.discount}</p>
             <div className='quantity-section'>
-                <button onClick={()=>setCounter({type:"increase"})}>
-                +
-            </button>
-            <p>{counter}</p>
+                
              <button disabled={counter<=1?true:false} onClick={()=>setCounter({type:"decrease"})}>
                 -
+            </button>
+            <p>{counter}</p>
+            <button onClick={()=>setCounter({type:"increase"})}>
+                +
             </button>
             </div>
             <button onClick={()=>{

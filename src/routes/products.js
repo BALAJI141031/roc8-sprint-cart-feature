@@ -1,5 +1,6 @@
 import React from 'react'
-import {dbProducts} from '../db' 
+// import {dbProducts} from '../db' 
+import productsFromDb from '../db.json'
 import {useCart} from "../context.js/cart"
 import {useNavigate} from 'react-router-dom'
 function Products() {
@@ -7,7 +8,7 @@ function Products() {
     const navigate=useNavigate()
   const cartIds=cart.map((cartItem)=>cartItem.id)
 
-    const renderedProducts=dbProducts.products.map((product)=>{
+    const renderedProducts=productsFromDb.map((product)=>{
         return <div key={product.id} className="ver-card ">
             <img src={product.imageUrl}/>
             <p>{product.brand}</p>
